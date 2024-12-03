@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">Ticketry</div>
+            <div class="toggle"></div>
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#Service">Booking</a>
+                <a href="#about-section">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btnLogin-popup" onclick="toggleLogin()">Login</button>
+            </nav>
+        </header>
+        <div id="home" class="ocerlay-home d-flex justify-center align-items-center">
+        
+        <div class="video-container">
+            <video src="https://video-previews.elements.envatousercontent.com/files/bca0915b-52ef-4ca5-956a-74ca69869f67/video_preview_h264.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="text-overlay">
+                <h2>Welcome to Concert Ticket Booking</h2>
+                <p>"Book your tickets now and enjoy the ultimate concert experience!"</p>
+                <a href="#Service" class="btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+<section id="Service">
+    <main>
+        <h1><b>OUR CONCERT SERVICES</b></h1>
+        <div class="service-grid">
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\classical concert.jpg" alt="Classical Concert" class="concert-img">
+                <h3>Classical <br> Concert</h3>
+                <button class="book-btn" onclick="openForm('Classical Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\pop concert.jpg" alt="Pop Concert" class="concert-img">
+                <h3>Pop  <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Pop Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\roack concert.jpg" alt="Rock Concert" class="concert-img">
+                <h3>Rock <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Rock Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\hip hop concert.jpg" alt="Hip-Hop Concert" class="concert-img">
+                <h3>Hip-Hop <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Hip-Hop Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\jazz concert.jpg" alt="Jazz Concert" class="concert-img">
+                <h3>Jazz <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Jazz Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\Electronic concert.jpg" alt="Electronic/DJ Concert" class="concert-img">
+                <h3>Electronic/DJ Concert</h3>
+                <button class="book btn" onclick="openForm('Electronic/DJ Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\country concert.jpg" alt="Country Concert" class="concert-img">
+                <h3>Country <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Country Concert')">Book</button>
+            </div>
+            <div class="concert-card">
+                <img src="C:\Users\Dhivyaa\OneDrive\Documents\metal concert.jpg" alt="Metal Concert" class="concert-img">
+                <h3>Metal <br> Concert</h3>
+                <button class="book btn" onclick="openForm('Metal Concert')">Book</button>
+            </div>
+        </div>
+    </main>
+</section>
+
+<!-- Registration Form Popup -->
+<div id="popupForm" class="popup-form">
+    <div class="form-container">
+        <h2>Register for <span id="concertName">Concert</span></h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <div class="form-buttons">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="closeForm()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <section class="events-section">
+        <h2 class="section-title">UPCOMING EVENTS</h2>
+        <div class="events-container">
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music1.jpg" alt="Event 1">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music2.jpg" alt="Event 2">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music3.jpg" alt="Event 3">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music4.jpg" alt="Event 4">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music5.jpg" alt="Event 5">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music6.jpg" alt="Event 6">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music7.jpg" alt="Event 7">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music8.jpg" alt="Event 8">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music9.jpg" alt="Event 9">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music10.jpg" alt="Event 10">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music11.jpg" alt="Event 11">
+          </div>
+          <div class="event-item">
+            <img src="C:\Users\Dhivyaa\OneDrive\Documents\music12.jpg" alt="Event 12">
+          </div>
+        </div>
+      </section>
+
+      <section id="about-section">
+        <h2 class="about-heading">ABOUT THE CONCERT</h2>
+        <div class="about-content">
+            <p>Experience the magic of live music at our upcoming concert.</p>
+            <p>Book your tickets and join us for an unforgettable night.</p>
+            <p>Welcome to Ticketry, your ultimate destination for live music experiences! We’re passionate about connecting music lovers with the artists they adore.</p>
+            <p>From intimate acoustic sets to electrifying stadium tours, we make booking concert tickets simple, secure, and seamless.</p>
+        </div>
+        <br>
+        <div class="about-section">
+            <div class="container" id="container1">
+                <h2 class="heading" onclick="toggleContent('content1')">Who We Are</h2>
+                <p class="content" id="content1">
+                    At TICKETRY, we’re more than just a ticketing platform—we’re a community of music enthusiasts dedicated to creating unforgettable moments. Our team works tirelessly to bring you access to the hottest events and exclusive shows across all the metro cities.
+                </p>
+            </div>
+            <br>
+            <div class="container" id="container2">
+                <h2 class="heading" onclick="toggleContent('content2')">What We Offer</h2>
+                <p class="content" id="content2">
+                    <b>Easy Booking:</b> Find and book tickets in just a few clicks.<br>
+                    <b>Wide Selection:</b> From mainstream superstars to indie gems, we’ve got it all.<br>
+                    <b>Verified Tickets:</b> Rest assured, every ticket you purchase is authentic and guaranteed.
+                </p>
+            </div>
+            <br>
+            <div class="container" id="container3">
+                <h2 class="heading" onclick="toggleContent('content3')">Why Choose Us</h2>
+                <p class="content" id="content3">
+                    Music has the power to bring people together, and we’re here to make it easier for you to experience the magic live.
+                </p>
+                <p>Our commitment to customer satisfaction means you can focus on what matters most—enjoying the music.</p>
+                <p>Let us help you create memories that last a lifetime. Explore upcoming concerts, discover new artists, and book your tickets today!</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    
+    <section id="contact">
+        <div class="translucentSection">
+            <div class="innerSection">
+                <h3>📧 Email Us </h3>
+                <a  target="-blank" rel=noreferrer" href="https://mail.google.com/mail?hl=en">
+                    <button class="card-action">  support@concerttickets.com</button>
+                </a>
+            </div>
+            <div class="innerSection">
+                <h3>📞 Call Us </h3>
+                <a href="+91 9994313567">
+                    <button class="card-action">  Phone: +91 9994313567</button>
+                </a>
+            </div>
+            <div class="innerSection">
+                <h3>📍Location </h3>
+                <a target="-blank" rel="noreferrer" href="https://maps.app.goo.gl/WiHRjPmMygBiAWbj6">
+                    <button class="card-action mapBtn">  Open on map</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="hidden">
+        <div class="login-container">
+        <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            <button onclick="handleLogin()">Login</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ticketry. All rights reserved.</p>
+            <p>Follow us on <a href="https://twitter.com/?lang=en-in">Twitter</a>, 
+                <a href="https://www.facebook.com/">Facebook</a>, 
+                <a href="https://www.instagram.com/">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+</html>
