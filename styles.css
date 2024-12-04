@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +15,15 @@ body {
 /* Header */
 header {
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     z-index: 1000;
     color: rgb(204, 13, 13);
-    width: 100%;
-
-
 }
 
 header .logo {
@@ -33,25 +31,20 @@ header .logo {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    color:#f4f4f4;
+    color: #f4f4f4;
 }
 
 .navigation a {
     margin-left: 20px;
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
 }
 
-.navigation a:hover{
+.navigation a:hover {
     color: #ffdd00;
 }
-
-.btnLogin-popup:hover {
-    text-decoration: underline;
-}
-    
 
 .btnLogin-popup {
     background: transparent;
@@ -67,47 +60,31 @@ header .logo {
     color: #e2c41b;
 }
 
-.hidden {
-    display: none;
-}
-.showcase
-{
+/* Showcase Section */
+.showcase {
     position: relative;
-    right: 0;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
-    padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgb(8, 8, 8);
-    transition: 0.5s;
+    padding: 100px 20px;
+    overflow: hidden;
     z-index: 2;
 }
-.showcase.active
-{
-    right: 300px;
-}
-video{
+
+video {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
-
 }
 
-.video-container {
-    position: relative;
-    width: 170vh;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-  }
-  
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,323 +92,51 @@ video{
     height: 100%;
     background: rgba(192, 187, 187, 0.412);
     mix-blend-mode: overlay;
-    z-index:1;
-}
-.text
-{
-  position: relative;
-  z-index: 10;
+    z-index: 1;
 }
 
 .text-overlay {
     position: absolute;
-    top: 50%; /* Center text vertically */
-    left: 50%; /* Center text horizontally */
-    transform: translate(-50%, -50%); /* Center it exactly in the middle */
-    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 2rem; /* Adjust size based on preference */
-    text-shadow: 2px 2px 4px rgba(156, 152, 152, 0.5); /* Optional: Adds shadow to make text more readable */
-    z-index: 2;
-  }
-
-.text-overlay .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    color: rgb(254, 253, 253);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top:20px;
-    background-color: #9d4909;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(156, 152, 152, 0.5);
 }
 
-
-  @media (max-width: 768px) {
-    .text-overlay h2 {
-      font-size: 2rem; /* Adjust text size for smaller screens */
-    }
-
-  .text-overlay p {
-    font-size: 1rem;
-    }
-  }
-
 /* Home Section */
-
 #home {
     padding: 120px 20px;
     height: 100vh;
     text-align: center;
 }
-.align-items-center{
-    align-items: center !important;
-}
-.d-flex{
-    display:flex !important;
-}
-.text-center {
-    text-align: center !important;
-}
-.p-5, mb-5{
-    padding: 5rem !important;
-    margin-bottom: 3rem !important;
-}
-element.style{
-    visibility: visible;
-    animation-name: zoomIn;
-}
 
-.tr-text{
-    font-size:40px;
-    text-align: center;
-    text-transform: uppercase;
-    line-height:1.2;
-    border: 3px solid rgb(215, 191, 8);
-}
-
-.animate__animated{
-    animation-duration:2.5;
-}
-
-.btn-primary:hover {
-    background:#7a787d ;
-}
-
+/* Translucent Section */
 .translucentSection {
-    background-color:black; 
+    background-color: black;
     border-radius: 3rem;
     display: flex;
     height: 50vh;
     justify-content: space-around;
-}
-
-@media (min-width:280px) and (max-width: 359px){
-.translucentSection .innerSection {
-    border-radius: 1.5rem;
-    margin: 1rem;
-    padding: 2rem;
-    justify-content: center;
-    text-align: center;
-}
-}
-
-.innerSection {
     align-items: center;
-    display:flex;
-    color: white;
-    background-color:black;
 }
 
-main {
-    padding: 20px;
-    max-width: 600px;
-    margin:auto;
-    background: black;
-    color:white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(159, 4, 4, 0.1);
-}
-
-section {
-    text-align: center;
-    background: black;
-}
 /* Booking Form */
-/* Popup Form Styles */
 .popup-form {
-    display: none; /* Initially hidden */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
 
-/* Form Container with Black Background */
-.form-container {
-    background: #000; /* Black background for the form */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Subtle white shadow for contrast */
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    color: #fff; /* White text for better visibility */
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-    color: #ffcc00; /* Add a highlight color if needed */
-}
-
-.form-container label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
-    color: #fefbfb; /* White label text */
-}
-
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #e69e0ed0;
-    border-radius: 4px;
-    background: #222; /* Darker background for input fields */
-    color: #fff; /* White text */
-}
-
-.form-buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.form-buttons button:first-child {
-    background: #28a745; /* Green for submit button */
-    color: white;
-}
-
-.form-buttons button:last-child {
-    background: #dc3545; /* Red for cancel button */
-    color: white;
-}
-
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    padding: 20px; 
-    background: black;
-    color: white;
-    text-align: center;
-    justify-content: center; 
-}
-
-
-@media (max-width: 768px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 480px) {
-    .service-grid {
-        grid-template-columns: 1fr; 
-    }
-}
-
-.concert-card {
-    background: #1b1b1b;
-    height: 100%;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(241, 230, 13, 0.775);
-    margin: auto; 
-}
-
-.concert-img {
-    width: 150px; 
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 10px;
-
-transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.concert-img:hover {
-  transform: scale(1.2) rotate(360deg); /* Zoom and spin effect */
-  filter: brightness(1.2); /* Slightly brighten the image */
-}
-
-.concert-img:hover {
-  transform: scale(1.2) rotate(360deg);
-  filter: brightness(1.2);
-  box-shadow: 0 10px 20px rgba(255, 255, 0, 0.5); /* Add a glowing effect */
-}
-
-#Service {
-    margin: 0 auto; 
-    padding: 40px 20px; 
-    text-align: center;
-    background: black; 
-    color: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-
-#events-section .events-section {
-    padding: 20px;
-    background-color: #0c0c0c;
-    overflow: hidden;
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #f2eaea;
-    background-color: #000;
-  }
-  
-  .events-container {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    animation: scroll-horizontal 20s linear infinite;
-    box-sizing: border-box;
-  }
-  
-  .event-item {
-    flex: 0 0 auto;
-    width: 250px;
-    border: 1px solid #eb0b0b;
-    border-radius: 8px;
-    background-color: black;
-    text-align: center;
-    scroll-snap-align: center;
-
-    
-  }
-  
-  .event-item img {
-    width: 100%;
-    height:100%;
-    object-fit: cover;
-    border-bottom: 1px solid #eb0b0b;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .event-item p {
-    margin: 10px;
-    font-size: 14px;
-    color: #e68200;
-  }
-  
-  /* Horizontal Scroll Animation */
-  @keyframes scroll-horizontal {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
 /* Login Container */
 .login-container {
     position: fixed;
@@ -439,81 +144,24 @@ transition: transform 0.5s ease, filter 0.5s ease;
     left: 50%;
     transform: translate(-50%, -50%);
     background: black;
-    color:white;
+    color: white;
     padding: 20px;
     border-radius: 8px;
-    width:300px;
+    width: 300px;
     text-align: center;
-    margin: 50px auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: white;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #0b0b0b;
-}
-
-button {
-    background: #772403;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
- 
-button:hover{
-    background-color: #c16606
-}
-
-/* Center the ABOUT THE CONCERT content */
-.about-heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.about-content {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 800px; /* Limit width for readability */
-    line-height: 1.6;
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
-/* Style the container section */
+/* About Section */
 .about-section {
     display: flex;
-    justify-content: space-around; /* Evenly space out the containers */
-    align-items: flex-start; /* Align containers at the top */
-    flex-wrap: nowrap; /* Prevent wrapping to new lines */
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     padding: 20px;
-    gap: 20px; /* Space between containers */
+    gap: 20px;
     background-color: black;
-    color: white;
 }
 
-/* Style individual containers */
 .container {
     width: 300px;
     border: 1px solid #e2bc0f;
@@ -521,64 +169,9 @@ button:hover{
     background-color: #050505;
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(200, 184, 3, 0.675);
-    transition: box-shadow 0.3s ease;
-    color: white;
 }
 
-.container:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Heading inside the container */
-.heading {
-    font-size: 18px;
-    cursor: pointer;
-    margin: 0;
-    padding: 10px;
-    background-color: #d6580a;
-    color: white;
-    border-radius: 5px;
-}
-
-/* Content inside the container */
-.content {
-    display: none;
-    color: white;
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.content.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .about-section {
-        flex-wrap: wrap; /* Stack containers vertically */
-        justify-content: center; /* Center the containers */
-    }
-
-    .container {
-        width: 90%; /* Adjust container width for smaller screens */
-    }
-}
-
-#contact{
-    padding: 50px 20px;
-    background: black;
-    text-align: center;
-    color: white;
-    min-height: 100vh;
-}
-
+/* Footer */
 footer {
     background: #020006;
     color: white;
@@ -589,14 +182,54 @@ footer {
     width: 100%;
 }
 
-footer .footer-content p {
-    margin: 5px 0;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header .logo {
+        font-size: 2rem;
+    }
+
+    .text-overlay {
+        font-size: 1.8rem;
+    }
+
+    .translucentSection {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
-#footer a{
-    color: #13120b;
-    text-decoration: none;
-    text-align: center;
-    text-decoration: underline;
-    background-color:#d8b225;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    .about-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        font-size: 1.5rem;
+    }
+
+    .translucentSection {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .popup-form {
+        width: 90%;
+        height: auto;
+    }
 }
