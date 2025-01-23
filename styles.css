@@ -392,7 +392,7 @@ transition: transform 0.5s ease, filter 0.5s ease;
     display: flex;
     gap: 10px;
     padding: 10px;
-    animation: scroll-horizontal 20s linear infinite;
+    animation: scroll-horizontal 30s linear infinite;
     box-sizing: border-box;
   }
   
@@ -600,3 +600,96 @@ footer .footer-content p {
     text-decoration: underline;
     background-color:#d8b225;
 }
+
+.payment-container {
+    background: #1a1a1a; /* Dark background for the container */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    width: 100%;
+    height: 100%;
+    max-width: 450px; /* Slightly wider for better form spacing */
+    max-height: 450px;
+    margin: auto; /* Center the container */
+    color: #fff; /* White text for better contrast */
+}
+
+.payment-container h1 {
+    margin: 0 0 20px;
+    text-align:center;
+    font-size: 1.8rem; /* Larger font for headings */
+    color: #f4b400; /* Accent color for heading */
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased spacing between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem; /* Clear, readable label size */
+    color: #ddd; /* Softer white for labels */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding for comfort */
+    border: 1px solid #444; /* Subtle border for input fields */
+    border-radius: 6px;
+    background: #2b2b2b; /* Darker input field background */
+    color: #fff; /* White text for input */
+    font-size: 1rem;
+    transition: box-shadow 0.3s, border-color 0.3s; /* Smooth focus effects */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #d6580a; /* Accent border on focus */
+    box-shadow: 0 0 8px rgba(244, 180, 0, 0.5); /* Glow effect on focus */
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #d6580a; /* Brighter color for the button */
+    color: #1a1a1a; /* Dark text for contrast */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Larger button text */
+    font-weight: bold; /* Emphasized text */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.submit-btn:hover {
+    background: #f4b400; /* Darker shade on hover */
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+.submit-btn:active {
+    background: #d6580a; /* Even darker shade on click */
+    transform: scale(0.98); /* Pressed button effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .payment-container {
+        padding: 20px;
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .payment-container h1 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .form-group input {
+        font-size: 0.9rem; /* Smaller font size for inputs */
+    }
+
+    .submit-btn {
+        font-size: 1rem; /* Adjust button text size */
+    }
+}
+
